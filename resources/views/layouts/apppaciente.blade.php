@@ -16,7 +16,10 @@
         <!-- Site Title -->
         <title>Dentist</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <!--
             CSS
@@ -31,7 +34,7 @@
             <link rel="stylesheet" href="/paciente/css/owl.carousel.css">
             <link rel="stylesheet" href="/paciente/css/main.css">
         </head>
-    <body>
+    <body style="background: #e9ebee">
 <!-- #Start header -->
         <header id="header" id="home">
                 <div class="header-top">

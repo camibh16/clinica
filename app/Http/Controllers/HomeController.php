@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Doctor;
+use App\Schedule;
 
 class HomeController extends Controller
 {
@@ -23,7 +26,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        // $doctors = Doctor::All();
+        $doctors = DB::table('doctors')
+                ->join('schedules', 'doctors.id','=','schedules.day_id')
+                ->get();
+
+
+
+        // foreach ($doctors as $doctor) {
+
+        //     dd($doctor->schedules);
+        // }                                                                                     
+        
+        return view('home')
+                ->with('doctors', $doctors);
     }
 
     public function admin()

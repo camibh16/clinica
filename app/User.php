@@ -19,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'lastname', 'email', 'password',
+        'name', 'lastname', 'email', 'password', 'cellphone', 'document_number', 'document_id', 'gender_id', 'occupation_id',
     ];
 
     /**
@@ -30,11 +30,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function Doctor()
-    {
-        return $this->belongsTo('App\Doctor');
-    }
 
     public function Gender()
     {
