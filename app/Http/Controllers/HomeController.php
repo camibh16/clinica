@@ -27,9 +27,9 @@ class HomeController extends Controller
     public function index()
     {
         // $doctors = Doctor::All();
-        $doctors = DB::table('doctors')
-                ->join('schedules', 'doctors.id','=','schedules.day_id')
-                ->get();
+        // $doctors = DB::table('doctors')
+        //         ->join('schedules', 'doctors.id','=','schedules.day_id')
+        //         ->get();
 
 
 
@@ -38,12 +38,11 @@ class HomeController extends Controller
         //     dd($doctor->schedules);
         // }                                                                                     
         
-        return view('home')
-                ->with('doctors', $doctors);
+        return view('home');
     }
 
     public function admin()
     {
-        return view('admin.index');
+        return view('dashboard.index');
     }
 }

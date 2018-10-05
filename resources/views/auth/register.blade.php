@@ -94,18 +94,18 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="document_id" class="col-md-4 col-form-label text-md-right">Type document:</label>
+                                                <label for="type_document_id" class="col-md-4 col-form-label text-md-right">Type document:</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control{{ $errors->has('document_id') ? ' is-invalid' : '' }}" id="document_id" value="{{ old('document_id') }}" name="document_id" required autofocus>
-                                                        @foreach ($documents as $document)
+                                                    <select class="form-control{{ $errors->has('type_document_id') ? ' is-invalid' : '' }}" id="type_document_id" value="{{ old('type_document_id') }}" name="type_document_id" required autofocus>
+                                                        @foreach ($type_documents as $document)
                                                             <option value="{{$document->id}}">{{$document->type}}
                                                             </option>                           
                                                         @endforeach
                                                     </select>
 
-                                                    @if ($errors->has('document_id'))
+                                                    @if ($errors->has('type_document_id'))
                                                         <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $errors->first('document_id') }}</strong>
+                                                            <strong>{{ $errors->first('type_document_id') }}</strong>
                                                         </span>
                                                     @endif
                                                 </div>

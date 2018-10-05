@@ -1,6 +1,6 @@
 @extends('layouts.apppaciente')
 @section('content')
-@foreach ($doctors as $doctor)
+{{-- @foreach ($doctors as $doctor) --}}
 <!-- start banner Area -->
             <section class="banner-area relative" id="home">
                 <div class="overlay overlay-bg"></div>
@@ -32,13 +32,13 @@
                                                     <div class="col-md-4">
                                                         <select class="form-control{{ $errors->has('document_id') ? ' is-invalid' : '' }}" id="document_id" value="{{ old('document_id') }}" name="document_id" required autofocus>
                                                                 
-                                                                @foreach ($doctor->schedules as $schedules)
+                                                                {{-- @foreach ($doctor->schedules as $schedules) --}}
                                                                     {{-- expr --}}
-                                                                    <option value="">{{$schedules->day_id->day}}
-                                                                    </option>  
+                                                                    {{-- <option value="">{{$schedules->day_id->day}} --}}
+                                                                    {{-- </option>   --}}
 
                                                                 
-                                                                @endforeach
+                                                                {{-- @endforeach --}}
 
                                                             </select>
 
@@ -52,7 +52,7 @@
                                             </div>
                                         <div class="modal-footer" style="background: #e9ebee">
                                             <button type="button" class="btn" style="background: #67bc00;color: #fff" data-dismiss="modal">Crear</button>
-                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                                         </div>
                                       </div>
                                     </div>
@@ -66,7 +66,7 @@
                     </div>
             </section>
 <!-- End banner Area -->
-@endforeach
+{{-- @endforeach --}}
 
 <!-- Start open-hour Area -->
             <section class="open-hour-area">

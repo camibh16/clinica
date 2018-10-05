@@ -226,7 +226,7 @@ desired effect
     </nav>
   </header>
 
-  @include(admin.partials.navbar);
+  {{-- @include('dashboard.partials.navbar'); --}}
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
